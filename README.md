@@ -122,4 +122,10 @@ token=123,user=abc
 ```
 In case of a POST request with a body, the same applies.
 
+## Use Cases
+Airport can be used for many IT purposes, I listed two of them below
 
+- **Automation** - Airport can be used to automate tasks without exposing the end VMs or devices to the customer. For example, you can have an endpoint that recieves some parameters in order to create a new VM and then the bash script behind may create a VM on any cloud or in an on-prem hypervisor.
+- **Serverless Data** - TBD
+
+## Roadmap
