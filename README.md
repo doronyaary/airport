@@ -96,5 +96,18 @@ if you have configured the "adminenabled" to "1" than the url "/manager" will be
 The top four numbers include the following:
 
 - **Valid Calls Count** - this number indicates the count of the calls that where validated and executed (where URLs matched)
+- **Invalid Calls Count** - this number indicates the count of the calls that didn't match any valid endpoint
+- **Active Endpoints** - the number of the configured endpoints in the configuration file
+- **Uptime** - the uptime minutes of the Airport service
+
+Then, you will see a list of endpoints the the followiing columns:
+
+- **Path/URL** - The URL/web path of the published endpoint
+- **Name/Description** - The value of the key "name" in the endpoint document in the JSON configuration
+- **Methods** - The allowed methods for this endpoint (either GET or POST or GET,POST)
+- **Enabled** - Shows if the endpoint is enabled or not
+
+## Valid Use Cases
+TBD
 
 
