@@ -87,3 +87,9 @@ airport --config=/etc/airport.conf
 ```
 
 Its important to mention that the "--config" option is mandatory and Airport has no default for this parameter. That is done in order to prevent common errors or to enable Airport to be executed in parallel with different configurations and ports in the same machine if needed.
+
+## Airport Manager
+if you have configured the "adminenabled" to "1" than the url "/manager" will be exposed with a very basic and simple information about the system usage. See the following example:
+
+TBD
+
