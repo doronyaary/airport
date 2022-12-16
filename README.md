@@ -125,7 +125,13 @@ In case of a POST request with a body, the same applies.
 ## Use Cases
 Airport can be used for many IT purposes, I listed two of them below
 
-- **Automation** - Airport can be used to automate tasks without exposing the end VMs or devices to the customer. For example, you can have an endpoint that recieves some parameters in order to create a new VM and then the bash script behind may create a VM on any cloud or in an on-prem hypervisor.
-- **Serverless Data** - TBD
+- **Automation** - Airport can be used to automate tasks without exposing the end VMs or devices to the consumer. For example, you can have an endpoint that recieves some parameters in order to create a new VM and then the bash script behind may create a VM on any cloud or in an on-prem hypervisor.
+- **Serverless Data** - Airport can return a result with a mime type of "application/json" and therefor can be used to send data without exposing the database server to the consumer.
+- **Alerting** - One can create a task which sends/uses the arguments in order to create cloud alerts without exposing the cloud tokens to the consumer.
 
 ## Roadmap
+Finaly, I would like to share my roadmap for Airport. If you want to suggest any improvement/changes please let me know by opening an issue.
+
+- RPM: Create an RPM package and include an installation script in it
+- Quotas: Set a "maximum" exec count configuration per hour/day (etc) for each endpoint
+
