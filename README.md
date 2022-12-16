@@ -30,7 +30,7 @@ Then, we will need to install Flask using PIP. You can do it by executing the fo
 pip install flask
 ```
 
-Once these are installed, we would need to create a configuration file for Airport. The configration file is a simple JSON text file which must contain several base configrations and then contain one document for each service/andpoint you would like to expose. This is a basic configuration example:
+Once these are installed, we would need to create a configuration file for Airport. The configration file is a simple JSON text file which must contain several base configrations and then contain one document for each service/andpoint you would like to expose. Let's assume for this example, that the config file is called "/etc/airport.conf" This is a basic configuration example:
 
 ```json
 {
@@ -59,4 +59,31 @@ Lets go over the basic parameters:
 - **adminenabled** - Should Airport display the admin console (uses the "/manager" URL)
 - **endpoints** - Lists the API endpoints to listen to (see below more details)
 
-Let's assume for this example, that the config file is called "/etc/airport.conf".
+The "endpoints" represent an array of JSON documents that describes the endpoints and commands that will be executed once consumed by a web request. Let's review the parameters/keys for each document:
+
+- **path** - Specifies the URL that will be used/listened to.
+- **type** - The type of the action that will be performed. Currently supporting "cmd". More options will be added in future versions.
+- **command** - The shell command to execute (runs with the linux permissions of the user that runs Airport)
+- **enabled** - Determines if the service is available, accepts "1" or "0".
+- **method** - The web request method. Currently accepts only "GET" or "POST" or "GET,POST". Other methods will be added in the future.
+- **mime** - The response mime type to return.
+- **silent** - If silent, than the standard output of the shell command is not returned back at all.
+- **name** - The general name of this endpoint. More usefull for display purposes on the manager web site.
+
+In order to start the service, you would need to run Airport in one of two ways. As I mentioned before, you can always take the code itself and run it thought my roadmap is to create an RPM package for ease of installation. Let's examine the two options.
+
+### Running from source code
+
+You can always just use the python3 executable to run Airport in the following way:
+
+```bash
+python3 airport.py --config=/etc/airport.conf
+```
+
+Once the binary would be available, you can run Airport like this as well:
+
+```bash
+airport --config=/etc/airport.conf
+```
+
+Its important to mention that the "--config" option is mandatory and Airport has no default for this parameter. That is done in order to prevent common errors or to enable Airport to be executed in parallel with different configurations and ports in the same machine if needed.
