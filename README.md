@@ -91,7 +91,7 @@ Its important to mention that the "--config" option is mandatory and Airport has
 ## Airport Manager
 if you have configured the "adminenabled" to "1" than the url "/manager" will be exposed with a very basic and simple information about the system usage. See the following example:
 
-![Alt text](airportmanager.png?raw=true)
+![Alt text](airportmanager2.png?raw=true)
 
 The top four numbers include the following:
 
