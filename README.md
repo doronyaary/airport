@@ -107,7 +107,19 @@ Then, you will see a list of endpoints the the followiing columns:
 - **Methods** - The allowed methods for this endpoint (either GET or POST or GET,POST)
 - **Enabled** - Shows if the endpoint is enabled or not
 
-## Valid Use Cases
-TBD
+## Parameters Mapping
+One may send parameters and values on the URL itself (in case of GET) and on the body of a POST request. Airport would aggregate the parameters into an array and then send it to an environment variable within the operating system called "AIRPORT_ARGS". Let's see an example. If you are executing a GET web request in the following way:
+
+```bash
+curl http://your-server:80/action?token=123&user=abc
+```
+
+Then when you execute your command on linux, you will be able to see your values as an aggregated string called "AIRPORT_ARGS". For example, the output for the above example would be:
+
+```bash
+echo "$AIRPORT_ARGS"
+token=123,user=abc
+```
+In case of a POST request with a body, the same applies.
 
 
