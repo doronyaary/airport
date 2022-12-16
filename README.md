@@ -129,6 +129,12 @@ Airport can be used for many IT purposes, I listed two of them below
 - **Serverless Data** - Airport can return a result with a mime type of "application/json" and therefor can be used to send data without exposing the database server to the consumer.
 - **Alerting** - One can create a task which sends/uses the arguments in order to create cloud alerts without exposing the cloud tokens to the consumer.
 
+## Known Limits
+Until further development, please consider the following as a known limit:
+
+- **JSON Restarts**: When changing the JSON configuration, Airport needs to be restarted to reload the new config file. I am working on this issue to provide a "live" reload mechanism.
+- **HA**: Airport is a standalone solution. I am working on a system healthcheck endpoint so HAProxy could be used.
+
 ## Roadmap
 Finaly, I would like to share my roadmap for Airport. If you want to suggest any improvement/changes please let me know by opening an issue.
 
