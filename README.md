@@ -93,5 +93,8 @@ if you have configured the "adminenabled" to "1" than the url "/manager" will be
 
 ![Alt text](airportmanager.png?raw=true)
 
-TBD
+The top four numbers include the following:
+
+- **Valid Calls Count** - this number indicates the count of the calls that where validated and executed (where URLs matched)
+
 
