@@ -77,16 +77,16 @@ In order to start the service, you would need to run Airport in one of two ways.
 You can always just use the python3 executable to run Airport in the following way:
 
 ```bash
-python3 airport.py --config=/etc/airport.conf
+python3 airport.py --config=/etc/airport.conf --log=/var/log/airport.log
 ```
 
 Once the binary would be available, you can run Airport like this as well:
 
 ```bash
-airport --config=/etc/airport.conf
+airport --config=/etc/airport.conf --log=/var/log/airport.log
 ```
 
-Its important to mention that the "--config" option is mandatory and Airport has no default for this parameter. That is done in order to prevent common errors or to enable Airport to be executed in parallel with different configurations and ports in the same machine if needed.
+Its important to mention that the "--config" option is mandatory and Airport has no default for this parameter. That is done in order to prevent common errors or to enable Airport to be executed in parallel with different configurations and ports in the same machine if needed. The "--log" option is not mandatory and Airport will work without it as well.
 
 ## Airport Manager
 if you have configured the "adminenabled" to "1" than the url "/manager" will be exposed with a very basic and simple information about the system usage. See the following example:
