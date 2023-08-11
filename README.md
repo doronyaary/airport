@@ -27,7 +27,7 @@ dnf install python3 python3-pip
 Then, we will need to install Flask using PIP. You can do it by executing the following command:
 
 ```bash
-pip install flask
+pip install flask flask_cors
 ```
 
 Once these are installed, we would need to create a configuration file for Airport. The configration file is a simple JSON text file which must contain several base configrations and then contain one document for each service/andpoint you would like to expose. Let's assume for this example, that the config file is called "/etc/airport.conf" This is a basic configuration example:
