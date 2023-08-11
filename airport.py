@@ -49,7 +49,7 @@ print(" Airport - API Endpoing Manager")
 print(" Released under the MIT license")
 
 for ar in sys.argv:
-    if (ar.lower().startswith("--confiig=")):
+    if (ar.lower().startswith("--config=")):
         SYS_CONFIG_FILE_NAME=ar.replace("--config=","")
     if (ar.lower().startswith("--log=")):
         SYS_LOG_FILE=ar.replace("--log=","")
