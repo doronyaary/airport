@@ -138,7 +138,7 @@ Until further development, please consider the following as a known limit:
 ## Roadmap
 Finaly, I would like to share my roadmap for Airport. If you want to suggest any improvement/changes please let me know by opening an issue.
 
-- **UI**: Add CPU/RAM usage and an invokation graph (line chart) to the manager (**Done**)
+- **UI**: Add CPU/RAM usage and an invokation graph (line chart) to the manager
 - **RPM**: Create an RPM package and include an installation script in it
 - **CMD@GIT**: Have Airport clone a git repo (or a single file) as a script and then run it
 
