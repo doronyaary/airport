@@ -132,13 +132,13 @@ Airport can be used for many IT purposes, I listed two of them below
 ## Known Limits
 Until further development, please consider the following as a known limit:
 
-- **JSON Restarts**: When changing the JSON configuration, Airport needs to be restarted to reload the new config file. I am working on this issue to provide a "live" reload mechanism.
+- **JSON Configuration Restarts**: When changing the JSON configuration, Airport needs to be restarted to reload the new config file. I am working on this issue to provide a "live" reload mechanism.
 - **HA**: Airport is a standalone solution. I am working on a system healthcheck endpoint so HAProxy could be used.
 
 ## Roadmap
 Finaly, I would like to share my roadmap for Airport. If you want to suggest any improvement/changes please let me know by opening an issue.
 
-- **UI**: Add CPU/RAM usage and an invokation graph (line chart) to the manager
+- **UI**: Add CPU/RAM usage and an invokation graph (line chart) to the manager (**Done**)
 - **RPM**: Create an RPM package and include an installation script in it
 - **CMD@GIT**: Have Airport clone a git repo (or a single file) as a script and then run it
 
