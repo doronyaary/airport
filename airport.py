@@ -14,7 +14,6 @@ SYS_COUNTER_ENDPOINTS=0
 SYS_START_TIME=time.time()
 SYS_CPU=0
 SYS_RAM=0
-# DEBUG VALUE - LEAVE BLANK
 SYS_LOG_FILE="airport.log"
 
 app = Flask(__name__)
